@@ -1,33 +1,33 @@
 <script setup lang="ts">
-import { getCurrentInstance } from 'vue';
-import {
-	Carousel,
-	CarouselContent,
-	CarouselItem,
-	CarouselNext,
-	CarouselPrevious,
-} from '../ui/carousel';
-import { Card, CardContent } from '../ui/card';
-import WeatherCarouselItem from './WeatherCarouselItem.vue';
-import Autoplay from 'embla-carousel-autoplay';
+	import { getCurrentInstance } from 'vue';
+	import {
+		Carousel,
+		CarouselContent,
+		CarouselItem,
+		CarouselNext,
+		CarouselPrevious,
+	} from '../ui/carousel';
+	import { Card, CardContent } from '../ui/card';
+	import WeatherCarouselItem from './WeatherCarouselItem.vue';
+	import Autoplay from 'embla-carousel-autoplay';
 
-const instance = getCurrentInstance();
+	const instance = getCurrentInstance();
 
-const getWeather = (city: string) => {
-	if (instance) {
-		instance.emit('get-weather', city);
-	}
-};
+	const getWeather = (city: string) => {
+		if (instance) {
+			instance.emit('get-weather', city);
+		}
+	};
 
-const props = defineProps<{
-	citiesData: { name: string; temp: number; image: string }[] | undefined;
-}>();
+	const props = defineProps<{
+		citiesData: { name: string; temp: number; image: string }[] | undefined;
+	}>();
 
-const plugin = Autoplay({
-	delay: 2000,
-	stopOnMouseEnter: true,
-	stopOnInteraction: false,
-});
+	const plugin = Autoplay({
+		delay: 2000,
+		stopOnMouseEnter: true,
+		stopOnInteraction: false,
+	});
 </script>
 
 <template>

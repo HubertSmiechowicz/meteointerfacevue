@@ -5,7 +5,7 @@ import WeatherCarousel from './WeatherCarousel.vue';
 import WeatherDatails from './WeatherDetails.vue';
 import axios, { AxiosResponse } from 'axios';
 
-const baseUrl = 'https://localhost:7257/';
+const baseUrl = 'http://localhost:5036/';
 const cityName = ref<string>('');
 const temperature = ref<number>(0);
 const description = ref<string>('');
@@ -76,13 +76,15 @@ const getWeather = (city: string) => {
 			:description="description"
 			:tempMax="tempMax"
 			:image="image"
-			@get-weather="getWeather" />
+			@get-weather="getWeather"
+		/>
 		<WeatherCarousel :citiesData="citiesData" @get-weather="getWeather" />
 		<WeatherDatails
 			:feelsLike="feelsLike"
 			:humidity="humidity"
 			:pressure="pressure"
-			:windSpeed="windSpeed" />
+			:windSpeed="windSpeed"
+		/>
 	</div>
 </template>
 
