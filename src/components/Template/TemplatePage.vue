@@ -1,31 +1,37 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue';
-import Brand from './Brand.vue';
-import ToggleMode from './ToggleMode.vue';
-import Navigation from './Navigation.vue';
-import Home from '../Home/Home.vue';
-import Today from '../Today/Today.vue';
+	import { ref, computed } from 'vue';
+	import Brand from './Brand.vue';
+	import ToggleMode from './ToggleMode.vue';
+	import Navigation from './Navigation.vue';
+	import Home from '../Home/Home.vue';
+	import Today from '../Today/Today.vue';
+	import FiveDay from '../FiveDay/FiveDay.vue';
+	import AirPollution from '../AirPollution/AirPollution.vue';
+	import Contact from '../Contact/Contact.vue';
 
-const routes = {
-	'/': Home,
-	'/today': Today,
-};
+	const routes = {
+		'/': Home,
+		'/today': Today,
+		'/five-day': FiveDay,
+		'/air-pollution': AirPollution,
+		'/contact': Contact,
+	};
 
-const currentPath = ref(window.location.hash);
+	const currentPath = ref(window.location.hash);
 
-window.addEventListener('hashchange', () => {
-	currentPath.value = window.location.hash;
-});
+	window.addEventListener('hashchange', () => {
+		currentPath.value = window.location.hash;
+	});
 
-const currentView = computed(() => {
-	return routes[currentPath.value.slice(1) || '/'];
-});
+	const currentView = computed(() => {
+		return routes[currentPath.value.slice(1) || '/'];
+	});
 
-const darkMode = ref<string>('');
+	const darkMode = ref<string>('');
 
-const toggleModeFunction = () => {
-	darkMode.value = darkMode.value === 'dark' ? '' : 'dark';
-};
+	const toggleModeFunction = () => {
+		darkMode.value = darkMode.value === 'dark' ? '' : 'dark';
+	};
 </script>
 
 <template>
