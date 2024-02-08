@@ -59,4 +59,4 @@ jobs:
           app-name: 'meteonow'
           slot-name: 'Production'
           package: .
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_647C254E23E4412088DCBC36CCC72CCC }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_6BC8139B00F540D79D5696294EDD5E7A }}
