@@ -4,7 +4,7 @@
 	import MainData from '../Template/MainData.vue';
 	import PollutionData from './PollutionData.vue';
 
-	const baseUrl = 'http://localhost:5036/';
+	const baseUrl = 'https://meteonowapi.azurewebsites.net/';
 	const cityName = ref<string>('');
 	const temperature = ref<number>(0);
 	const description = ref<string>('');

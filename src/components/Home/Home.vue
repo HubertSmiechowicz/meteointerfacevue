@@ -5,7 +5,7 @@
 		class="h-full w-full flex flex-col justify-center items-center text-blue-400 dark:text-slate-50">
 		<img
 			class="rounded-full"
-			src="\src\assets\meteobrand.png"
+			src="https://www.dropbox.com/scl/fi/96v22sly4yxxibrtyxqyf/meteobrand.png?rlkey=bu88fb6821zfqqkgcfmwretza&dl=1"
 			alt="meteo brand" />
 		<p class="font-bold my-5">Witaj w MeteoNow</p>
 		<div class="flex flex-col justify-center items-center">

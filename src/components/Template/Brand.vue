@@ -3,7 +3,7 @@
 <template>
 	<a href="#/" class="flex items-center w-full h-full hover:cursor-pointer">
 		<img
-			src="/src/assets/meteobrand.png"
+			src="https://www.dropbox.com/scl/fi/96v22sly4yxxibrtyxqyf/meteobrand.png?rlkey=bu88fb6821zfqqkgcfmwretza&dl=1"
 			alt="meteo brand"
 			class="w-14 h-14 ms-3 rounded-full" />
 		<p
